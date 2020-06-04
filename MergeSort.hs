@@ -54,5 +54,6 @@ merge x
 
 mSort :: [Int] -> Int -> [Int]
 mSort x i 
+    |  i <= 0 = mSort x 1
     |  i >= length x = x
     |  otherwise = mSort ( merge ( split x i ) ) (i+1) 
